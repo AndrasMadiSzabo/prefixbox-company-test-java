@@ -3,16 +3,30 @@
 ## Short questions
 
 - What is a package? How do you define a package?
+	- Like a folder or directory where files are semantically grouped together.
 - What is a constructor? When is it executed?
+	- A special method that creates an instance of the class when called. It is executed at runtime.
 - How do you implement inheritance in Java?
+	- I "extend" the class with the parent.
 - How do you prevent someone to inherit from a class?
+	- I make it "private" or "protected".
 - What is a final variable? Where you can assign value to final variables?
+	- Its value cannot be changed. Its value is assigned at declaration.
 - Specify the available access modifiers in Java and briefly explain them
+	- private: can only be accassed from within the class
+	- default: can only be accassed from within the same package
+	- protected: can only be accassed from the same package or from a subclass
+	- public: can be accessed from anywhere
 - Briefly explain the mechanism of exception handling
+	- In some cases, there is the possibility of runtime exeption that can be foreseen. In these cases, we can deal with these situations by "throwing" and "catching" the "exeption".
 - What is the difference between an abstract class and an interface?
+	- In an interface, there are no method implementations while in an abstract class, there can be fully implemented methods and only an abstract method is needed.
 - What is the difference between Comparator and Comparable?
-- How Iterable and Iterator interface works? What methods need to exist in a
-class that implements them? What is their relation to for loops?
+	- F*ing no idea at the time of writing. 
+	- (I looked it up, though. Thanks for asking. As I see it now is that Comparable is defined within the class to be sorted and it can be used on only one dimension/field while Comparator (which is much cooler) is defined in separate classes based on separate sorting dimensions and I can select the one I need in different situations.)
+- How Iterable and Iterator interface works? What methods need to exist in a class that implements them? What is their relation to for loops?
+	- Also didn't know. But now:
+	- An iterable is a class that implements Iterable (interface) like e.g. List. It can be iterated using a for-each loop. Iterable hs one method: iterator() that retuns an Iterator. Iterator has hasNext() and next() that can be used to process the next item.
 
 ## Programming tasks
 
