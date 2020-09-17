@@ -26,7 +26,7 @@
 	- (I looked it up, though. Thanks for asking. As I see it now is that Comparable is defined within the class to be sorted and it can be used on only one dimension/field while Comparator (which is much cooler) is defined in separate classes based on separate sorting dimensions and I can select the one I need in different situations.)
 - How Iterable and Iterator interface works? What methods need to exist in a class that implements them? What is their relation to for loops?
 	- Also didn't know. But now:
-	- An iterable is a class that implements Iterable (interface) like e.g. List. It can be iterated using a for-each loop. Iterable hs one method: iterator() that retuns an Iterator. Iterator has hasNext() and next() that can be used to process the next item.
+	- An iterable is a class that implements Iterable (interface) like e.g. List. It can be iterated using a for-each loop. Iterable has one method: iterator() that retuns an Iterator. Iterator has hasNext() and next() that can be used to process the next item.
 
 ## Programming tasks
 
@@ -49,7 +49,13 @@ Example:
 
 ```java
 public boolean isPalindrom(String input) {
-
+	input to inputCharArray[]
+	StringBuilder stringBuilder = new StringBuilder();
+	for (int i = 0; i < inputCharArray.length; i++){
+		stringBuilder.append(
+		inputCharArray[inputCharArray.length - 1 - i]);
+	}
+	return input.equals(stringBuilder);
 }
 
 isPalindrom("alma"); //false
@@ -68,13 +74,23 @@ Example:
 
 ```java
 public String findTheDuplicate(String[] input) {
-
+	fori(i=0; i< input.lengthl i++){
+		fori(j=i+1; i< input.lengthl i++){
+			if(input[i].equals(input[j]){
+				return input[i];
+			}
+		}
+	}
+	return "No equals";
 }
 
 String[] fruitBasket = new String[] { "apple", "banana", "coconut", "durian",
 "banana", "elderberry", "fig", "grapefruit" };
 findTheDuplicate(fruitBasket); //should return banana
 ```
+---
+Eddig tartott az egy oram :-( .
+---
 
 ### Count The Words
 
